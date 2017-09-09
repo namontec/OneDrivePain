@@ -1,0 +1,24 @@
+{
+  "name": "onedrivepain",
+  "version": "1.0.0",
+  "description": "Find path names with length more than 260 Edit",
+  "main": "odpain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namontec/OneDrivePain.git"
+  },
+  "keywords": [
+    "OneDrive",
+    "onedrive",
+    "skydrive"
+  ],
+  "author": "namontec",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namontec/OneDrivePain/issues"
+  },
+  "homepage": "https://github.com/namontec/OneDrivePain#readme"
+}
