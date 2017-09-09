@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-var maxPathLength = 260;
+var maxPathLength = 430;
 
 //
 // Return array of files in folder and subfolders

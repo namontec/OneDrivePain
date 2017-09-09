@@ -1,5 +1,5 @@
 # OneDrivePain
-Find path names with length more than 260 
+Find path names with length more than 430 (max path length in OneDrive) 
 
 ## Usage
 
