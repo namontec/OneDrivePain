@@ -10,6 +10,8 @@ function getFolders(localPath = './') {
   var dirArray = [];
   var fullPath = fs.realpathSync(localPath);
 
+  console.log(fullPath);
+
   var files = fs.readdirSync(fullPath);
 
   files.forEach(function (file) {
@@ -44,6 +46,8 @@ function isGreater(inArray, maxPathLength) {
 
 var folders = getFolders();
 var resultFolders = isGreater(folders, maxPathLength);
+
+console.log();
 
 if (resultFolders.length > 0) {
   resultFolders.forEach(function(file) {
