@@ -13,17 +13,21 @@ function getFolders(localPath = './') {
   console.log(fullPath);
 
   var files = fs.readdirSync(fullPath);
-
-  files.forEach(function (file) {
+  
+  var filesCount = files.length;
+  for (var i = 0; i < filesCount ; i++){
+    var file = files[i];
     var pathFile = path.join(localPath, file, "/");
+
+    // if file is directory recursively call getFolders()
     if ( fs.statSync(pathFile).isDirectory() ) {
-      // if file is directory recursively call getFolders()
       dirArray = dirArray.concat( getFolders(pathFile) );
     }
     else {
       dirArray.push( path.join(fullPath, file) );
     }
-  })
+  }
+
   return dirArray;
 }
 
