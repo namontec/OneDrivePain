@@ -1,7 +1,7 @@
 {
   "name": "onedrivepain",
   "version": "1.0.0",
-  "description": "Find path names with length more than 260 Edit",
+  "description": "Find path names with length more than 260",
   "main": "odpain.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
