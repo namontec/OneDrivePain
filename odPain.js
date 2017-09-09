@@ -50,6 +50,7 @@ var resultFolders = isGreater(folders, maxPathLength);
 console.log();
 
 if (resultFolders.length > 0) {
+  console.log("There are", resultFolders.length, "files which names are greater", maxPathLength, "in", fs.realpathSync('./'));
   resultFolders.forEach(function(file) {
     console.log(file);
   })
