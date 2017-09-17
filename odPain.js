@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
-var maxPathLength = 430;
+const maxPathLength = 260;
 
 //
 // Return array of files in folder and subfolders
@@ -34,7 +33,7 @@ function getFolders(localPath = './') {
 //
 // Return array of files which path is greater 
 //
-function isGreater(inArray, maxPathLength) {
+function foldersGreaterThan(inArray, maxPathLength) {
   var outArray = new Array();
   
   for (var i = 0; i < inArray.length; i++) {
@@ -47,21 +46,27 @@ function isGreater(inArray, maxPathLength) {
   return outArray;
 }
 
+function printResults(resultFolders) {
+  if (resultFolders.length > 0) {
+    console.log("There are", resultFolders.length, "files which names are greater", maxPathLength, "in", fs.realpathSync('./'));
+    resultFolders.forEach(function(file) {
+      console.log(file);
+    })
+  }
+  else {
+    console.log("There are no files which names are greater", maxPathLength, "in", fs.realpathSync('./'));
+  }
+}
+
+
 
 var folders = getFolders();
-var resultFolders = isGreater(folders, maxPathLength);
+var resultFolders = foldersGreaterThan(folders, maxPathLength);
+printResults(resultFolders);
 
-console.log();
 
-if (resultFolders.length > 0) {
-  console.log("There are", resultFolders.length, "files which names are greater", maxPathLength, "in", fs.realpathSync('./'));
-  resultFolders.forEach(function(file) {
-    console.log(file);
-  })
-}
-else {
-  console.log("There are no files which names are greater", maxPathLength, "in", fs.realpathSync('./'));
-}
+
+
 
 
 
