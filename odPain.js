@@ -1,10 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-const maxPathLength = 260;
-
-//
 // Return array of files in folder and subfolders
-//
 function getFolders(localPath = './') {
   var dirArray = [];
   var fullPath = fs.realpathSync(localPath);
@@ -30,9 +24,8 @@ function getFolders(localPath = './') {
   return dirArray;
 }
 
-//
+
 // Return array of files which path is greater 
-//
 function foldersGreaterThan(inArray, maxPathLength) {
   var outArray = new Array();
   
@@ -46,6 +39,7 @@ function foldersGreaterThan(inArray, maxPathLength) {
   return outArray;
 }
 
+// Print results
 function printResults(resultFolders) {
   if (resultFolders.length > 0) {
     console.log("There are", resultFolders.length, "files which names are greater", maxPathLength, "in", fs.realpathSync('./'));
@@ -59,6 +53,10 @@ function printResults(resultFolders) {
 }
 
 
+
+const fs = require('fs');
+const path = require('path');
+const maxPathLength = 260;
 
 var folders = getFolders();
 var resultFolders = foldersGreaterThan(folders, maxPathLength);
